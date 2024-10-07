@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Results - BrewSip</title>
+    <!-- Link the new stylesheet -->
+    <link rel="stylesheet" href="results-style.css">
+</head>
+
+<body>
+    <div class="results-container">
+        <header>
+            <div class="logo-container">
+                <img src="./cafe4.png" alt="BrewSip Logo" class="logo">
+                <h1>BrewSip</h1>
+            </div>
+        </header>
+
+        <div class="results-content">
+            <h2 class="game-over">Game Over!</h2>
+            <p class="final-score">Your Total Points: <span id="score"></span></p>
+            <p class="thank-you-message">Thank you for playing!</p>
+            <p class="try-again">You can try again tomorrow.</p>
+        </div>
+
+        <footer>
+            <p class="footer-message">Keep Sipping, Keep Winning!</p>
+        </footer>
+    </div>
+
+    <script>
+        // Retrieve the score from localStorage and display it
+        const finalScore = localStorage.getItem("finalScore");
+        document.getElementById("score").innerText = finalScore || 0;
+
+        // Optionally, clear the score after displaying
+        localStorage.removeItem("finalScore");
+    </script>
+</body>
+
+</html>

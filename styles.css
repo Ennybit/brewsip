@@ -1,0 +1,168 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('./cafe1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+/* Make the game container semi-transparent so the background is visible */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    animation: slideUp 1.5s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    /* Align logo & name on the left, question count on the right */
+    align-items: center;
+    /* Center vertically */
+    margin-bottom: 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    /* Center logo and text vertically */
+}
+
+.logo {
+    width: 100px;
+    /* Set a width for the logo */
+    margin-right: 10px;
+    /* Space between the logo and the text */
+}
+
+h1 {
+    color: #333;
+    font-size: 2.2em;
+    margin: 0;
+    /* Remove default margin */
+}
+
+.question-count {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.game {
+    margin-top: 20px;
+}
+
+#riddle-box {
+    padding: 20px;
+    background-color: #ffdfc4;
+    border-radius: 12px;
+    font-size: 1.3em;
+    color: #555;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#answer-input {
+    padding: 12px;
+    font-size: 1.1em;
+    width: 80%;
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+#answer-input:focus {
+    border-color: #ff6f3c;
+    outline: none;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 1.2em;
+    background-color: #ff6f3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 111, 60, 0.4);
+}
+
+button:hover {
+    background-color: #ff3f1d;
+}
+
+#result {
+    margin-top: 15px;
+    font-size: 1.3em;
+    color: green;
+}
+
+#timer {
+    font-size: 1.2em;
+    color: #ff6f3c;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.scoreboard {
+    margin-top: 20px;
+}
+
+#points {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    background: #fff9f4;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    button {
+        font-size: 1em;
+    }
+
+    #answer-input {
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrewSip Riddle Hunt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="./cafe4.png" alt="BrewSip Logo" class="logo"> <!-- Logo image -->
+                <h1>BrewSip</h1> <!-- Name beside the logo -->
+            </div>
+            <div class="question-count">
+                <p>Questions Answered: <span id="questions-answered">0</span></p>
+            </div>
+        </header>
+
+        <div class="game">
+            <div id="riddle-box">
+                <p id="riddle"></p>
+            </div>
+            <div id="timer">Time Left: 60s</div>
+            <input type="text" id="answer-input" placeholder="Enter your answer">
+            <button onclick="checkAnswer()">Submit Answer</button>
+            <p id="result"></p>
+        </div>
+
+        <div class="scoreboard">
+            <p id="points">Points: 0</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

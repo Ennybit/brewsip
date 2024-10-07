@@ -1,0 +1,98 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Use a modern font like Poppins */
+    background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
+    /* Subtle background gradient */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-container {
+    background: white;
+    padding: 50px 30px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    /* Soft shadow */
+    text-align: center;
+    max-width: 500px;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 60px;
+    margin-right: 15px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    /* Adds a soft shadow */
+}
+
+h1 {
+    color: #333;
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.2em;
+    color: #666;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+button {
+    margin-top: 30px;
+    padding: 12px 35px;
+    font-size: 1.2em;
+    background-color: #ff6f3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 111, 60, 0.4);
+}
+
+button:hover {
+    background-color: #ff3f1d;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .welcome-container {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    button {
+        font-size: 1em;
+    }
+}
