@@ -1,0 +1,39 @@
+/* Basic styles for body */
+body {
+    display: flex;
+    /* Use flexbox to center the content */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    height: 100vh;
+    /* Full viewport height */
+    margin: 0;
+    /* Remove default margin */
+    background-color: #f0f0f0;
+    /* Light grey background */
+    font-family: Arial, sans-serif;
+    /* Font styling */
+}
+
+/* Style for the heading */
+h1 {
+    position: absolute;
+    /* Positioning the title */
+    top: 20px;
+    /* Spacing from the top */
+    text-align: center;
+    /* Center text */
+    color: #333;
+    /* Dark grey color for text */
+}
+
+/* Style for canvas */
+canvas {
+    border: 2px solid #333;
+    /* Border around QR code */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Shadow effect */
+}

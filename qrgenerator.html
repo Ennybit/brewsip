@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="qrstyles.css"> <!-- Link to the CSS file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+</head>
+
+<body>
+    <h1>QR Code Generator</h1>
+    <canvas id="qrcodeCanvas"></canvas>
+
+    <script>
+        // Create a new QRious instance
+        const qr = new QRious({
+            element: document.getElementById('qrcodeCanvas'), // The canvas element to render the QR code
+            size: 200, // Size of the QR code
+            value: "https://youtube.com" // Predefined URL to encode in the QR code
+        });
+    </script>
+</body>
+
+</html>
